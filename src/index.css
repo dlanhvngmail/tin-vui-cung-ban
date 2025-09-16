@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 250 100% 99%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -17,8 +17,9 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 221 83% 65%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -28,6 +29,22 @@ All colors MUST be HSL.
 
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
+
+    /* News specific colors */
+    --news-primary: 221 83% 53%;
+    --news-secondary: 217 91% 60%;
+    --news-accent: 142 76% 36%;
+    --news-neutral: 220 14% 96%;
+    --news-dark: 222.2 84% 4.9%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--news-primary)), hsl(var(--news-secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(var(--news-primary) / 0.1);
+    --shadow-card: 0 8px 25px -5px hsl(var(--news-primary) / 0.15);
+    --shadow-hover: 0 20px 40px -10px hsl(var(--news-primary) / 0.2);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
