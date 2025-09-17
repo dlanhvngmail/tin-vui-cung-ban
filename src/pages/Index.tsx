@@ -77,17 +77,19 @@ const Index = () => {
       <Header />
       
       {/* Breaking News Banner */}
-      <div className="bg-gradient-to-r from-news-primary to-news-secondary text-white">
-        <div className="container py-3">
+      <div className="bg-gradient-accent text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 animate-[slide-in-right_3s_ease-in-out_infinite]"></div>
+        <div className="container py-3 relative z-10">
           <div className="flex items-center space-x-3">
-            <Badge className="bg-white/20 text-white border-0 animate-pulse">NÓNG</Badge>
+            <Badge className="bg-white/20 text-white border-0 animate-bounce shadow-accent">NÓNG</Badge>
             <div className="flex items-center space-x-2 text-sm">
-              <TrendingUp className="h-4 w-4" />
+              <TrendingUp className="h-4 w-4 animate-pulse" />
               <span className="font-medium">Tin nóng:</span>
               <span>Chính phủ công bố gói hỗ trợ kinh tế mới trị giá 10 tỷ USD</span>
             </div>
           </div>
         </div>
+        <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-white/20 to-transparent"></div>
       </div>
 
       <main className="container py-8">
@@ -123,8 +125,9 @@ const Index = () => {
 
             {/* Load More */}
             <div className="text-center pt-8">
-              <Button className="bg-news-primary hover:bg-news-primary/90 text-white px-8">
-                Tải thêm tin tức
+              <Button className="bg-gradient-to-r from-news-primary to-news-primary-dark hover:shadow-glow hover:scale-105 transition-all duration-300 text-white px-8 relative overflow-hidden group">
+                <span className="relative z-10">Tải thêm tin tức</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </Button>
             </div>
           </div>
