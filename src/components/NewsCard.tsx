@@ -1,5 +1,6 @@
 import { Clock, User } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 interface NewsCardProps {
   title: string;
@@ -9,12 +10,23 @@ interface NewsCardProps {
   author: string;
   publishedAt: string;
   featured?: boolean;
+  id?: string;
 }
 
-const NewsCard = ({ title, excerpt, image, category, author, publishedAt, featured = false }: NewsCardProps) => {
+const NewsCard = ({ title, excerpt, image, category, author, publishedAt, featured = false, id }: NewsCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (id) {
+      navigate(`/news/${id}`);
+    }
+  };
   if (featured) {
     return (
-      <article className="group relative overflow-hidden rounded-xl bg-white shadow-card hover:shadow-hover transition-all duration-300">
+      <article 
+        className="group relative overflow-hidden rounded-xl bg-white shadow-card hover:shadow-hover transition-all duration-300 cursor-pointer"
+        onClick={handleClick}
+      >
         <div className="aspect-[16/9] overflow-hidden">
           <img
             src={image}
@@ -43,7 +55,10 @@ const NewsCard = ({ title, excerpt, image, category, author, publishedAt, featur
   }
 
   return (
-    <article className="group overflow-hidden rounded-lg bg-white shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer">
+    <article 
+      className="group overflow-hidden rounded-lg bg-white shadow-soft hover:shadow-card transition-all duration-300 cursor-pointer"
+      onClick={handleClick}
+    >
       <div className="aspect-[16/10] overflow-hidden">
         <img
           src={image}

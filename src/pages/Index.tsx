@@ -13,6 +13,7 @@ import sportsImage from "@/assets/sports-news.jpg";
 
 const Index = () => {
   const featuredNews = {
+    id: "1",
     title: "Công nghệ AI mới nhất đang thay đổi thế giới như thế nào",
     excerpt: "Những tiến bộ vượt bậc trong lĩnh vực trí tuệ nhân tạo đang mở ra những cơ hội mới và thách thức lớn cho nhân loại trong thế kỷ 21.",
     image: heroImage,
@@ -23,6 +24,7 @@ const Index = () => {
 
   const newsData = [
     {
+      id: "2",
       title: "Thị trường chứng khoán Việt Nam tăng trưởng mạnh trong quý III",
       excerpt: "Các chuyên gia phân tích cho rằng đây là dấu hiệu tích cực cho nền kinh tế trong giai đoạn phục hồi sau đại dịch.",
       image: businessImage,
@@ -31,6 +33,7 @@ const Index = () => {
       publishedAt: "4 giờ trước"
     },
     {
+      id: "3",
       title: "Breakthrough mới trong công nghệ chip semiconductor",
       excerpt: "Các nhà khoa học đã phát triển thành công chip mới với hiệu suất vượt trội và tiêu thụ năng lượng thấp hơn 40%.",
       image: techImage,
@@ -39,6 +42,7 @@ const Index = () => {
       publishedAt: "6 giờ trước"
     },
     {
+      id: "4",
       title: "World Cup 2024: Đội tuyển Việt Nam chuẩn bị cho trận đấu quan trọng",
       excerpt: "HLV Park Hang-seo đã có những chiến lược mới để chuẩn bị cho trận đấu quyết định tại vòng loại World Cup.",
       image: sportsImage,
@@ -47,6 +51,7 @@ const Index = () => {
       publishedAt: "8 giờ trước"
     },
     {
+      id: "5",
       title: "Chính sách mới về môi trường được Chính phủ thông qua",
       excerpt: "Luật mới sẽ có hiệu lực từ đầu năm 2025, nhằm tăng cường bảo vệ môi trường và phát triển bền vững.",
       image: businessImage,
@@ -55,6 +60,7 @@ const Index = () => {
       publishedAt: "10 giờ trước"
     },
     {
+      id: "6",
       title: "Startup Việt Nam nhận được đầu tư 50 triệu USD",
       excerpt: "Công ty công nghệ tài chính này đã thu hút được sự chú ý của các nhà đầu tư quốc tế với giải pháp thanh toán sáng tạo.",
       image: techImage,
@@ -63,6 +69,7 @@ const Index = () => {
       publishedAt: "12 giờ trước"
     },
     {
+      id: "7",
       title: "Giải pháp mới cho vấn đề giao thông đô thị",
       excerpt: "Hệ thống giao thông thông minh được triển khai thí điểm tại TP.HCM, hứa hẹn giảm 30% thời gian di chuyển.",
       image: sportsImage,
